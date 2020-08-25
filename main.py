@@ -17,14 +17,14 @@ from scipy.fftpack import fft
 class AudioStream(object):
     def __init__(self):
 
-        # Set up the pyqtgraph items, such as the
+        # Set up the pyqtgraph items
         self.traces = dict()
         self.phase = 0
         self.t = np.arange(0, 3.0, 0.01)
         self.app = QtGui.QApplication(sys.argv)
-        self.win = pg.GraphicsWindow(title="Basic plotting examples")
+        self.win = pg.GraphicsWindow(title="Audio Analyzer")
         self.win.setGeometry(5,115, 1910, 900)
-        self.win.setWindowTitle('pyqtgraph example: Plotting')
+        self.win.setWindowTitle('Audio Analyzer')
         pg.setConfigOptions(antialias=True)
 
         # Give more meaningful x axis wf labels
